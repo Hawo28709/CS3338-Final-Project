@@ -8,24 +8,24 @@ Jira Link: https://calstatela-cs3338.atlassian.net/jira/software/projects/CFP/bo
 
 2 Formal Objective Breakdown
 Snapshot 1– Start Objective
-ˆ
-ˆ
+
+
 Establish core system architecture.
 Set up frontend, backend, and database structure.
 Implement basic role-based authentication.
 Begin initial UI layout (Home, Categories, Activities).
 Create first drafts of SDD, SRS, and README.
 Snapshot 2– Checkpoint 1
-ˆ
-ˆ
+
+
 
 Added wellness surveys and response tracking.
 Implemented event calendar system.
 Expanded resource categories.
 Updated SDD, SRS, and README.
 Snapshot 3– Checkpoint 2
-ˆ
-ˆ
+
+
 Implemented Achievement Dashboard.
 Added AI-powered assistant.
 Added multilingual support (English & Spanish).
@@ -43,7 +43,7 @@ Why This Software Matters
 The We Go to Cal State LA application provides a centralized digital platform for students,
 families, and staff by combining academic tools, wellness assessments, resource libraries,
 achievement tracking, and event scheduling.
-ˆ
+
 Supports Academic Success: Provides guided learning, study tools, and career
 development resources.
 Promotes Wellness: Includes emotional wellness surveys and reflective tools.
@@ -53,7 +53,7 @@ Centralizes Resources: Brings multiple student services into one platform.
 
 How to Download or Access the Application
 4.1 Requirements
-ˆ
+
 Node.js 18+ (for frontend and backend)
 npm or yarn
 PostgreSQL/MySQL or SQLite for development
@@ -80,7 +80,7 @@ Seed Demo Data
 npm run seed
 
 4.5 Accessing the Application
-ˆ
+
 Student Portal: http://localhost:3000
 Parent Portal: http://localhost:3000/parent
 Staff Portal: http://localhost:3000/staff
