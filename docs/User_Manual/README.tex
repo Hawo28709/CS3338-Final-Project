@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+\setstretch{1.2}
+
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\begin{center}
+{\Large \textbf{README / User Manual \\ We Go to Cal State LA Application}}\\[1em]
+Version 1.0
+\end{center}
+
+\section{Jira Project Board}
+All team task management and sprint planning were completed in Jira.
+
+\noindent\textbf{Jira Link:}  
+\url{https://calstatela-cs3338.atlassian.net/jira/software/projects/CFP/boards/169}
+
+\section{Formal Objective Breakdown}
+
+\subsection*{Snapshot 1 – Start Objective}
+\begin{itemize}
+    \item Establish core system architecture.
+    \item Set up frontend, backend, and database structure.
+    \item Implement basic role-based authentication.
+    \item Begin initial UI layout (Home, Categories, Activities).
+    \item Create first drafts of SDD, SRS, and README.
+\end{itemize}
+
+\subsection*{Snapshot 2 – Checkpoint 1}
+\begin{itemize}
+    \item Added wellness surveys and response tracking.
+    \item Implemented event calendar system.
+    \item Expanded resource categories.
+    \item Updated SDD, SRS, and README.
+\end{itemize}
+
+\subsection*{Snapshot 3 – Checkpoint 2}
+\begin{itemize}
+    \item Implemented Achievement Dashboard.
+    \item Added AI-powered assistant.
+    \item Added multilingual support (English \& Spanish).
+    \item Updated all documentation.
+\end{itemize}
+
+\subsection*{Snapshot 4 – Final Checkpoint}
+\begin{itemize}
+    \item Improved UI/UX and accessibility.
+    \item Completed final testing and fixes.
+    \item Prepared final documentation and deliverables.
+\end{itemize}
+
+\section{Why This Software Matters}
+
+The \textit{We Go to Cal State LA} application provides a centralized digital platform for students, families, and staff by combining academic tools, wellness assessments, resource libraries, achievement tracking, and event scheduling.
+
+\begin{itemize}
+    \item \textbf{Supports Academic Success:} Provides guided learning, study tools, and career development resources.
+    \item \textbf{Promotes Wellness:} Includes emotional wellness surveys and reflective tools.
+    \item \textbf{Engages Families:} Gives parents and guardians direct access to helpful information.
+    \item \textbf{Ensures Accessibility:} Bilingual support and WCAG-compliant UI.
+    \item \textbf{Centralizes Resources:} Brings multiple student services into one platform.
+\end{itemize}
+
+\section{How to Download or Access the Application}
+
+\subsection{Requirements}
+\begin{itemize}
+    \item Node.js 18+ (for frontend and backend)
+    \item npm or yarn
+    \item PostgreSQL/MySQL or SQLite for development
+\end{itemize}
+
+\subsection{Running the Frontend}
+\begin{verbatim}
+cd frontend
+npm install
+npm run dev
+\end{verbatim}
+Access the app at: \url{http://localhost:3000}
+
+\subsection{Running the Backend}
+\begin{verbatim}
+cd backend
+npm install
+npm run start
+\end{verbatim}
+API available at: \url{http://localhost:5000/api}
+
+\subsection{Database Setup}
+
+\subsubsection*{Create Database}
+\begin{verbatim}
+CREATE DATABASE wegotocsla;
+\end{verbatim}
+
+\subsubsection*{Migrate Schema}
+\begin{verbatim}
+npm run migrate
+\end{verbatim}
+
+\subsubsection*{Seed Demo Data}
+\begin{verbatim}
+npm run seed
+\end{verbatim}
+
+\subsection{Accessing the Application}
+\begin{itemize}
+    \item Student Portal: \url{http://localhost:3000}
+    \item Parent Portal: \url{http://localhost:3000/parent}
+    \item Staff Portal: \url{http://localhost:3000/staff}
+\end{itemize}
+
+\end{document}
