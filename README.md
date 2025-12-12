@@ -4,13 +4,10 @@ We Go to Cal State LA Application
 Version 1.0
 1 Jira Project Board
 All team task management and sprint planning were completed in Jira.
-Jira Link: https://calstatela-cs3338.atlassian.net/jira/software/projects/CFP/
-boards/169
+Jira Link: https://calstatela-cs3338.atlassian.net/jira/software/projects/CFP/boards/169
+
 2 Formal Objective Breakdown
 Snapshot 1– Start Objective
-ˆ
-ˆ
-ˆ
 ˆ
 ˆ
 Establish core system architecture.
@@ -21,8 +18,7 @@ Create first drafts of SDD, SRS, and README.
 Snapshot 2– Checkpoint 1
 ˆ
 ˆ
-ˆ
-ˆ
+
 Added wellness surveys and response tracking.
 Implemented event calendar system.
 Expanded resource categories.
@@ -30,28 +26,23 @@ Updated SDD, SRS, and README.
 Snapshot 3– Checkpoint 2
 ˆ
 ˆ
-ˆ
 Implemented Achievement Dashboard.
 Added AI-powered assistant.
 Added multilingual support (English & Spanish).
-1
-ˆ
 Updated all documentation.
+
+
 Snapshot 4– Final Checkpoint
-ˆ
-ˆ
-ˆ
+
 Improved UI/UX and accessibility.
 Completed final testing and fixes.
 Prepared final documentation and deliverables.
-3 WhyThis Software Matters
+
+
+Why This Software Matters
 The We Go to Cal State LA application provides a centralized digital platform for students,
 families, and staff by combining academic tools, wellness assessments, resource libraries,
 achievement tracking, and event scheduling.
-ˆ
-ˆ
-ˆ
-ˆ
 ˆ
 Supports Academic Success: Provides guided learning, study tools, and career
 development resources.
@@ -59,25 +50,27 @@ Promotes Wellness: Includes emotional wellness surveys and reflective tools.
 Engages Families: Gives parents and guardians direct access to helpful information.
 Ensures Accessibility: Bilingual support and WCAG-compliant UI.
 Centralizes Resources: Brings multiple student services into one platform.
-4 Howto Download or Access the Application
+
+How to Download or Access the Application
 4.1 Requirements
-ˆ
-ˆ
 ˆ
 Node.js 18+ (for frontend and backend)
 npm or yarn
 PostgreSQL/MySQL or SQLite for development
+
 4.2 Running the Frontend
+
 cd frontend
 npm install
 npm run dev
 Access the app at: http://localhost:3000
-2
+
 4.3 Running the Backend
 cd backend
 npm install
 npm run start
 API available at: http://localhost:5000/api
+
 4.4 Database Setup
 Create Database
 CREATE DATABASE wegotocsla;
@@ -85,11 +78,9 @@ Migrate Schema
 npm run migrate
 Seed Demo Data
 npm run seed
+
 4.5 Accessing the Application
-ˆ
-ˆ
 ˆ
 Student Portal: http://localhost:3000
 Parent Portal: http://localhost:3000/parent
 Staff Portal: http://localhost:3000/staff
-3
