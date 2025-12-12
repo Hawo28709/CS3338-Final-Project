@@ -54,9 +54,9 @@ Centralizes Resources: Brings multiple student services into one platform.
 How to Download or Access the Application
 4.1 Requirements
 
-Node.js 18+ (for frontend and backend)
-npm or yarn
-PostgreSQL/MySQL or SQLite for development
+-Node.js 18+ (for frontend and backend)
+-npm or yarn
+-PostgreSQL/MySQL or SQLite for development
 
 4.2 Running the Frontend
 
