@@ -2,11 +2,13 @@ This is the README file for the final project
 README / User Manual
 We Go to Cal State LA Application
 Version 1.0
-1 Jira Project Board
+
+1. Jira Project Board
 All team task management and sprint planning were completed in Jira.
 Jira Link: https://calstatela-cs3338.atlassian.net/jira/software/projects/CFP/boards/169
 
-2 Formal Objective Breakdown
+2. Formal Objective Breakdown
+
 Snapshot 1– Start Objective
 
 
