@@ -68,7 +68,7 @@ Access the app at: http://localhost:3000
 - npm run start
 - API available at: http://localhost:5000/api
 
-- 4.4 Database Setup
+4.4 Database Setup
 - Create Database
 - CREATE DATABASE wegotocsla;
 - Migrate Schema
