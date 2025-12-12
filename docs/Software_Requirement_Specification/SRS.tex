@@ -1,0 +1,169 @@
+\documentclass{article}
+
+\usepackage{geometry} 
+\usepackage{hyperref} 
+\usepackage{longtable} 
+\usepackage{array} 
+\usepackage{lipsum} 
+
+\geometry{a4paper, margin=1in} 
+
+\begin{document}
+
+% Cover Page 
+\begin{titlepage}
+    \centering
+    \vspace*{1in}
+    {\Huge\bfseries We Go to Cal State LA \par}
+    {\Huge\bfseries Software Requirements Specification (SRS) \par}
+    \vspace{1.5in}
+    {\Large Version 2 \par}
+    {\Large Group 7 \par}
+    {\Large Pacific Clinics \par}
+    {\large 12/11/25\par}
+\end{titlepage}
+
+% Table of Contents 
+\tableofcontents
+\newpage 
+
+% Version Discription Table 
+\section*{Version Description} 
+\begin{table}[h!] \centering 
+    \begin{tabular}{c|c|c} 
+        \hline 
+        \textbf{Version} & \textbf{Date} & \textbf{Description} \\ 
+        \hline 1.0 & 9/12/25 & Initial draft created \\ 
+        \hline 1.1 & 11/15/25 & Checkpoint 1 revisions added (Snapshot 2) \\
+        \hline 1.2 & 11/29/25 & Checkpoint 2 revisions added (Snapshot 3) \\
+        \hline 2.0 & 12/11/25 & Final Checkpoint revisions added (Snapshot 4) \\
+        \hline
+    \end{tabular} 
+    \caption{Version Description Table} 
+\end{table} 
+    
+% Section 1: Introduction 
+\section{Introduction} 
+\subsection{Purpose} 
+The purpose of this document is to define the software requirements for the initial release of the We Go to Cal State LA platform. This Software Requirements Specification (SRS) serves as the foundational reference for the development team, and collaborators, outlining both the functional and non-functional requirements. 
+
+\begin{itemize}
+    \item Developers: To understand the system functionality and technical requirements that must be implemented.
+    \item Project Managers: To track project progress, align technical efforts with business goals, and manage scope.
+    \item Testers: To design test cases and validate system behavior based on defined requirements.
+    \item Technical Writers: To produce user documentation, help guides, and support materials based on feature specifications.
+    \item Clients and End-Users: To confirm that their expectations, preferences, and functional needs are accurately represented.
+
+\end{itemize}
+
+\subsection{Audience} 
+The intended audience for this document includes the development team, project managers, and any other parties involved in the creation and deployment of the We Go to Cal State LA platform. 
+
+\subsection{Overview} 
+The We Go to Cal State LA platform is designed to enhance student well-being by serving as a centralized hub for educational resources, surveys, and interactive engagement with health professionals. The platform focuses on accessibility, personalization, and holistic support, with a mobile-first design that prioritizes ease of use across all devices. 
+
+
+% External Interface Requirements 
+
+\section{External Interface Requirements} 
+\subsection{User Interfaces} The We Go to Cal State LA application provides a consistent and user-friendly interface designed to meet the needs of a diverse user base, including students, family members, and health professionals. All interface elements are built with accessibility, clarity, and ease of navigation in mind. 
+
+\begin{itemize} 
+    \item \textbf{Accessibility:} All user interfaces will comply with WCAG 2.1 guidelines to ensure usability for individuals with disabilities, including screen reader support, high-contrast modes, and appropriate tab navigation. 
+    \item \textbf{Screen Layout:} Each screen will follow a consistent visual hierarchy, including a persistent navigation bar, header, and footer when applicable. 
+    \item \textbf{Standard Features:} The UI will include help icons, error and confirmation messages, modals, and tooltips that follow universal design best practices. 
+\end{itemize} 
+
+% Snapshot 2 Revision
+\subsection*{Snapshot 2 Revision}
+Based on Snapshot 2 objectives, the following user-interface-related requirements were added or modified:
+
+\begin{itemize}
+    \item Implementation of PHQ-9 and GAD-7 mental health assessments, requiring dedicated assessment screens.
+    \item Creation of prototype layouts for the chatbot screen and resource hub.
+    \item Establishment of the initial navigation structure across major app sections.
+    \item Refinement of the UI direction based on early student survey feedback.
+\end{itemize}
+
+% Snapshot 4 Revision
+\subsection*{Snapshot 4 Revision}
+The Snapshot 4 checkpoint focused on stabilizing the application and preparing it for final delivery. 
+Key updates and refinements include:
+
+\begin{itemize}
+    \item Finalization of core features, including chatbot interactions, quizzes, and wellness resources.
+    \item Identification and resolution of bugs and usability issues across the platform.
+    \item Enhancement of visual components, including interface styling and layout adjustments to improve user experience.
+\end{itemize}
+
+\subsection{Software Interfaces} The We Go to Cal State LA platform integrates a variety of software components and services to support authentication, data management, content delivery, and external system interoperability. The following outlines key software interfaces and integration details: 
+
+\begin{itemize} \item \textbf{Cloudflare D1 (SQLite-based Database):} Utilized for serverless, lightweight data storage with support for structured queries and efficient data retrieval. 
+    \item \textbf{Amazon Cognito:} Provides user authentication, secure session management, and real-time data synchronization. 
+    \item \textbf{React Native Framework (via Expo):} The core frontend framework enables cross-platform compatibility for both iOS and Android. 
+    \item \textbf{Expo Video Library:} Used to host and stream educational and onboarding video content. 
+    \item \textbf{API Integrations:} The platform will integrate with third-party APIs for additional functionalities, such as mental health resources, educational content, and analytics tracking. 
+\end{itemize} 
+
+% Snapshot 3 Revision
+\subsection*{Snapshot 3 Revision}
+Snapshot 3 objectives introduced major backend and functional enhancements:
+
+\begin{itemize}
+    \item Expansion of mental wellness features, including mood check-ins requiring new data models.
+    \item Implementation of backend logic through AWS and Cloudflare for secure data storage and retrieval.
+    \item Development of the chatbot prompting structure, including safeguards for safety-related responses.
+    \item Additional user interface improvements based on iterative feedback.
+\end{itemize}
+
+
+
+% Legal and Ethical Considerations 
+\section{Legal and Ethical Considerations} 
+\subsection{Data Privacy} 
+To respect user privacy and meet legal and ethical standards, the platform will minimize data collection. Wherever possible, data will be stored locally on the user’s device (e.g., for personal survey results). For essential backend data processing, a serverless model is adopted using AWS Lambda functions—a scalable, event-driven compute service that is free within certain usage limits. This ensures user information is protected while keeping backend complexity low. 
+\subsection{Legal/Ethical Issues} 
+{The We Go to Cal State LA platform is guided by ethical principles that ensure fair, transparent, and inclusive access to wellness resources. These principles safeguard user trust while upholding the integrity of the capstone project’s objectives. \par}
+\begin{itemize}
+    \item All data handling practices must comply with the California Consumer Privacy Act (CCPA) and other applicable privacy laws.
+    \item The system shall adhere to the Family Educational Rights and Privacy Act (FERPA) to safeguard student records and ensure that only authorized individuals have access to educational information.
+    \item The platform shall collect only the minimum amount of data required for its functionality, avoiding storage of any unnecessary or overly sensitive information.
+    \item All user data shall be encrypted in transit and at rest, with access restricted by strict role-based controls.
+    \item Upon project completion, data will not be retained or repurposed, unless additional user consent is obtained.
+    
+\end{itemize}
+
+\newpage 
+
+% Glossary 
+\section{Glossary} 
+\begin{longtable}
+    {|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{10cm}|} 
+    \hline \textbf{Term} & \textbf{Definition} \\ 
+    \hline UI & User interface \\ 
+    \hline SRS & Software Requirements Specification \\
+    \hline API & Application Programming Interface \\ 
+    \hline AWS & Amazon Web Services, cloud platform used for backend operations. \\ 
+    \hline AWS & Amazon Web Services, cloud platform used for backend operations. \\
+    \hline AWS Lambda & Serverless compute service used to run backend functions without managing servers. \\
+    \hline CCPA & California Consumer Privacy Act, regulates privacy and data protection for California residents. \\
+    \hline Chatbot & Automated conversational system that provides guidance, information, and safety responses. \\
+    \hline Cloudflare D1 & Cloudflare’s lightweight SQLite-based serverless database used for application storage. \\
+    \hline Cognito & Amazon Cognito authentication service for managing user login and security. \\
+    \hline Expo & Development platform for React Native used to build iOS and Android apps. \\
+    \hline Expo Video Library & API for rendering video content inside the mobile application. \\
+    \hline GAD-7 & A 7-item anxiety screening questionnaire used to assess levels of generalized anxiety disorder. \\
+    \hline Mood Check-In & Feature that allows users to log emotional status and track mental wellness over time. \\
+    \hline Navigation Structure & The organizational layout determining how users move between screens. \\
+    \hline PHQ-9 & A 9-item depression assessment tool widely used in mental health screening. \\
+    \hline Prototype Layout & Preliminary UI mock-ups used to design the structure of app screens. \\
+    \hline React Native & Framework used to build mobile applications for iOS and Android using JavaScript. \\
+    \hline Resource Hub & Centralized section providing wellness resources, links, and supportive tools. \\
+    \hline SQLite & Lightweight relational database format used by Cloudflare D1. \\
+    \hline Stability Testing & Process of identifying bugs, crashes, and performance issues before release. \\
+    \hline WCAG 2.1 & Web Content Accessibility Guidelines, standards ensuring digital accessibility. \\
+    \hline
+\end{longtable} 
+\end{document}
+\end{longtable} 
+\end{document}

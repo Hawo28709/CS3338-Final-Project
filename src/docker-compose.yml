@@ -1,0 +1,55 @@
+services:
+  # Frontend Service (React Native App)
+  frontend:
+    image: node:18
+    container_name: wego-frontend
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    command: >
+      sh -c "
+        npm install &&
+        npm start
+      "
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - wego-network
+    
+
+  # Backend Service (AWS Lambda → Express.js)
+  backend:
+    image: node:18
+    container_name: wego-backend
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    command: npm run dev
+    ports:
+      - "4000:4000"
+    environment:
+      - DATABASE_URL=sqlite:///data/database.db
+      - AUTH_PROVIDER=cognito
+    depends_on:
+      - database
+    networks:
+      - wego-network
+
+
+  # Database Service (Cloudflare D1 using SQLite)
+  database:
+    image: nouchka/sqlite3
+    container_name: wego-sqlite
+    volumes:
+      - ./database:/data
+    networks:
+      - wego-network
+    
+
+networks:
+  wego-network:
+
+volumes:
+  

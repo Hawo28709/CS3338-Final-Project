@@ -1,0 +1,244 @@
+\documentclass[12pt,oneside]{report}
+
+% ============ PACKAGES ============
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\setstretch{1.15}
+
+\usepackage{graphicx}
+\usepackage{longtable,booktabs,array}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{ragged2e}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
+
+\newcolumntype{L}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+% ============ DOCUMENT ============
+\begin{document}
+
+% -------- COVER PAGE --------
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+
+{\Huge \bfseries Software Design Document\\[0.6em]
+We Go to Cal State LA}
+
+\vspace{1.5cm}
+
+{\Large Team 7 — Pacific Clinics}
+
+\vspace{1.2cm}
+
+{\Large December 2025}
+
+\vfill
+\end{titlepage}
+
+\pagenumbering{roman}
+
+% -------- TABLE OF CONTENTS --------
+\tableofcontents
+\clearpage
+
+% -------- VERSION DESCRIPTION --------
+\chapter*{Version Description}
+\addcontentsline{toc}{chapter}{Version Description}
+
+\begin{longtable}{L{2cm} L{9cm} L{3cm}}
+\toprule
+\textbf{Version} & \textbf{Description} & \textbf{Date} \\
+\midrule
+1.0 & Initial SDD created & Dec 2, 2025 \\
+1.1 & Added System Architecture and UI sections & Dec 3, 2025 \\
+1.2 & Completed Glossary and References & Dec 3, 2025 \\
+\bottomrule
+\end{longtable}
+
+\clearpage
+\pagenumbering{arabic}
+
+% ==============================
+%       INTRODUCTION
+% ==============================
+\chapter{Introduction}
+
+\section{Purpose}
+This Software Design Document (SDD) describes the design, structure, and operation of the \textbf{We Go to Cal State LA} platform. It provides developers, reviewers, and stakeholders with a clear understanding of the system architecture, user interface, and database organization.
+
+\section{Intended Audience}
+This document is intended for:
+\begin{itemize}
+    \item Software developers building or maintaining the platform.
+    \item Project managers and academic supervisors.
+    \item Testers validating functionality.
+    \item Stakeholders at Pacific Clinics.
+\end{itemize}
+
+\section{System Overview}
+The platform provides:
+\begin{itemize}
+    \item Daily check-ins to support mental wellness.
+    \item Access to categorized well-being resources.
+    \item Surveys such as PHQ-9 and GAD-7.
+    \item A chatbot for interactive assistance.
+    \item Calendar events, reminders, and notifications.
+\end{itemize}
+
+The application is built using:
+\begin{itemize}
+    \item \textbf{React Native} for cross-platform mobile UI.
+    \item \textbf{Cloudflare D1} for SQL-based data storage.
+    \item \textbf{AWS Lambda / Cloudflare Workers} for serverless backend logic.
+    \item \textbf{Amazon Cognito} for secure authentication.
+\end{itemize}
+
+% ==============================
+%   SYSTEM ARCHITECTURE
+% ==============================
+\chapter{System Architecture}
+
+\section{System Workflow}
+
+The workflow of the system is shown below, capturing the interaction between users, external resources, video services, and internal logic.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{yes.png}
+\caption{External Entity Data Flow}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{teatea.jpg}
+\caption{High-Level System Process Flow}
+\end{figure}
+
+\section{Component Breakdown}
+The system is composed of the following major components:
+
+\subsection*{Client-Side (Frontend)}
+\begin{itemize}
+    \item Implemented in React Native
+    \item Handles UI rendering, user input, and navigation
+    \item Communicates with backend through secure API requests
+\end{itemize}
+
+\subsection*{Server-Side (Backend)}
+\begin{itemize}
+    \item Runs on AWS Lambda and Cloudflare Workers
+    \item Manages authentication, surveys, event scheduling, notifications
+    \item Provides REST API endpoints
+\end{itemize}
+
+\subsection*{Database Layer}
+\begin{itemize}
+    \item Uses Cloudflare D1 (SQL relational model)
+    \item Stores users, survey responses, resources, achievements, events
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{snap3.png}
+\caption{Entity–Relationship Diagram (ERD)}
+\end{figure}
+
+% ==============================
+%       USER INTERFACE
+% ==============================
+\chapter{User Interface}
+
+\section{How to Use the System}
+
+\subsection*{Daily Check-In}
+Users select an emotion and may receive a supportive message or recommended activity.
+
+\subsection*{Resource Library}
+Provides categorized well-being resources such as:
+\begin{itemize}
+    \item Mental health
+    \item Financial well-being
+    \item Academic support
+\end{itemize}
+
+\subsection*{Wellness Surveys}
+Includes:
+\begin{itemize}
+    \item PHQ-9 (depression)
+    \item GAD-7 (anxiety)
+\end{itemize}
+
+\subsection*{Chatbot}
+AI-powered support for questions, guidance, and navigation.
+
+\subsection*{Calendar / Events}
+Users can:
+\begin{itemize}
+    \item View mental health events
+    \item Add reminders
+    \item Register for programs
+\end{itemize}
+
+\section{UI Screenshots}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{snap1.PNG}
+\caption{Example UI Screens: Check-In, Resources, Chatbot}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{snap2.PNG}
+\caption{Example UI Screens: Inspiration, Surveys, Login}
+\end{figure}
+
+\section{User Interface Flow Model}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\textwidth]{Flowchart.png}
+\caption{System UI Flow Model}
+\end{figure}
+
+% ==============================
+%       GLOSSARY
+% ==============================
+\chapter{Glossary}
+
+\begin{longtable}{L{3cm} L{10cm}}
+\toprule
+\textbf{Acronym} & \textbf{Definition} \\
+\midrule
+UI & User Interface \\
+API & Application Programming Interface \\
+DB & Database \\
+JWT & JSON Web Token \\
+PWA & Progressive Web App \\
+WCAG & Web Content Accessibility Guidelines \\
+SQL & Structured Query Language \\
+\bottomrule
+\end{longtable}
+
+% ==============================
+%       REFERENCES
+% ==============================
+\chapter{References}
+
+\begin{itemize}
+    \item Cloudflare D1 Documentation — \url{https://www.cloudflare.com}
+    \item React Native Documentation — \url{https://reactnative.dev}
+    \item HIPAA Guidelines — U.S. Department of Health \& Human Services
+    \item FERPA Guidelines — U.S. Department of Education
+    \item WCAG Accessibility Standards — \url{https://www.w3.org/WAI}
+\end{itemize}
+
+\end{document}

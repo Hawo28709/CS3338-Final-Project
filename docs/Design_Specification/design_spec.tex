@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{titling}
+
+\geometry{a4paper, margin=1in}
+
+\title{Design Specifications}
+\author{
+    Team 7\\
+    Clinton Ma\\
+    Carlos Amaya Lorenzo\\
+    Andrew Panameno-Ramirez\\
+    Zhanqi Wang\\
+}
+\date{December 4, 2025}
+
+\setlength{\droptitle}{6cm}
+
+\pagestyle{fancy}
+\fancyhead[L]{Design Specifications}
+\fancyhead[R]{Page \thepage}
+\fancyfoot[C]{}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\end{titlepage}
+
+\section*{Packages}
+\begin{itemize}
+    \item React Native (Expo)
+    \item AWS Services (API Gateway, Lambda, Cognito)
+    \item Cloudflare D1
+    \item OpenAI API
+\end{itemize}
+
+\section*{Dependencies}
+\begin{itemize}
+    \item \textbf{Front-End (React Native):}
+    \begin{itemize}
+        \item Node.js and npm
+        \item Expo Go (for testing and deployment)
+        \item React Native Navigation Components
+        \item AsyncStorage (local database)
+    \end{itemize}
+
+    \item \textbf{Back-End (AWS + Cloudflare):}
+    \begin{itemize}
+        \item AWS Lambda: Handles API logic and chatbot requests
+        \item API Gateway: Exposes REST endpoints to the app
+        \item Amazon Cognito: Handles user authentication and the creation, updation and deletion of accounts
+        \item Cloudflare D1: Stores user data and tests events
+    \end{itemize}
+
+    \item \textbf{AI Layer:}
+    \begin{itemize}
+        \item OpenAI GPT-based chatbot
+        \item Custom prompts for promoting mental health and wellness, and other resources
+    \end{itemize}
+
+    \item \textbf{Database Management:}
+    \begin{itemize}
+        \item Cloudflare D1 Console
+        \item SQL schema for users, quiz scores, and resource data
+    \end{itemize}
+\end{itemize}
+
+\section*{Libraries}
+\begin{itemize}
+    \item React Native Reanimated
+    \item React Navigation
+    \item OpenAI Node.js Library
+\end{itemize}
+
+\end{document}
